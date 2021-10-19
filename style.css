@@ -31,7 +31,12 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+}
+
+main section div {
+  
+  margin: 10px 0 10px 0;
 }
 
 /* ---  Groups & Items --- */
@@ -64,6 +69,16 @@ header {
   color: #fff;
 }
 
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -81,8 +96,10 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px 20px 10px 20px;
 }
 
 form label {
@@ -100,8 +117,15 @@ form button {
   border: none;
   color: #fff;
   font-size: 24px;
+  margin-top: 20px;
   padding: 15px;
   width: 100%;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 /* -------  Footer ------- */
@@ -117,3 +141,55 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px 5px 20px;
+  }
+
+  header nav{
+    padding-top: 10px;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 10px 0 10px;
+  }
+
+  form button {
+    margin-top: 0;
+    padding: 15px 40px 15px 40px;
+    
+  }
+
+  form div {
+    flex-direction: column;
+    
+  }
+
+  main section div {
+  
+    margin: 10px 10px 10px 10px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+  .item-double {
+    flex: 2;
+    padding-top: 125px;
+  }
+
+  .centered {
+    padding: 130px 0 75px 0;
+  }
+}
