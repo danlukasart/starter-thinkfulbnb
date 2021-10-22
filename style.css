@@ -44,15 +44,26 @@ main section div {
 .group {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .item {
   flex: 1;
   margin: 10px;
+  align-self: center;
+  
 }
 
 .item-double {
   flex: 2;
+}
+.center-text {
+  align-self: center;
+}
+
+img {
+  min-width: 100%;
+  object-fit: cover;
 }
 
 /* -------  Navigation ------- */
@@ -142,7 +153,7 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 800px) {
   header {
     display: flex;
     flex-direction: row;
@@ -172,11 +183,6 @@ footer p {
     
   }
 
-  main section div {
-  
-    margin: 10px 10px 10px 10px;
-  }
-
   .group {
     display: flex;
     flex-direction: row;
@@ -184,12 +190,7 @@ footer p {
     
   }
 
-  .item-double {
-    flex: 2;
-    padding-top: 125px;
-  }
-
   .centered {
-    padding: 130px 0 75px 0;
+    align-self: center;
   }
 }
